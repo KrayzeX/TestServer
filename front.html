@@ -5,8 +5,18 @@
         <title>Main Page</title>
 
         <center><h1 class ="t1">It is your chance to choose the way</h1>
+            <div id="way">
+                <p><img class="way" src="way.jpg" width="450" height="370">
+                </p>
+            </div>
 
             <style>
+
+             #way{
+                 float: center;
+             }
+
+             head p {}
              .t1{
                  color: white;
                  font-style: oblique;
@@ -20,7 +30,7 @@
                  display: inline-block;
                  color: black;
                  padding: 20px 30px;
-                 margin: 10px 20px;
+                 margin: 10px auto 20px;
                  border-radius: 15px;
                  font-family: 'Montserrat', sans-serif;
                  font-weight: bold;
@@ -41,32 +51,110 @@
                  color: #FFFFFF;
                  text-shadow:1px 2px 3px #000000;
              }
+
+             a{
+                 color: white;
+             }
+
+             #menuVert{width:7%; height: auto;}
+             #menuVert ul{
+                 display: block;
+                 width: 100%;
+                 height: auto;
+                 margin: 0px;
+                 padding: 0px;
+                 list-style: none;
+                 position:relative;
+             }
+             #menuVert ul li{display:block; width: 100%; height: auto; position: relative;}
+                 #menuVert ul li a{
+                     position:relative;
+                     display:block;
+                     width:25%;
+                     height:auto;
+                     box-sizing:border-box;
+                     font-size: 18px;
+                     text-transform:uppercase;
+                     font-weight:bold;
+                     color: #ffffff;
+                     line-height:1.2 em;
+                     padding: 10px 15px;
+                     background: none;
+                     border-top:1px solid #ffffff;
+                     text-decoration: none;
+                 }
+             #menuVert ul li:first-child a{border:0px;}
+             #menuVert ul li a:hover, #menuVert ul li: hover a{
+                 background: gray;
+             }
+
+             #menuVert ul li ul{
+                 position: absolute;
+                 top: 0px;
+                 left:100%;
+                 display:none;
+                 width:auto;
+             }
+
+             #menuVert ul li:hover ul{display:block;}
+             #menuVert ul li ul li a{
+                 white-space: nowrap;
+                 text-transform:none;
+                 padding:5px 20px;
+             }
+
+             #menuVert ul li ul li a:hover{
+                 background: none;
+                 color: #ffffff;
+             }
+
             </style>
+        </center>
+
+            <aside id="menuVert">
+                <ul>
+                    <li><a href="#m1">Первый пункт</a></li>
+                    <li><a href="#m2">Второй пункт</a>
+                        <ul>
+                            <li><a href="#m2_1">Выпад1</a></li>
+                            <li><a href="#m2_2">Выпад2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#m3">Третий пункт</a>
+                        <ul>
+                            <li><a href="#m3_1">Выпад1</a></li>
+                            <li><a href="#m3_2">Выпад2</a></li>
+                            <li><a href="#m3_3">Выпад3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
     </head>
 
     <body bgcolor="#000000" style="background-image: url('pagestyle.jpg')">
+        <center>
         <form action="/auth">
-            <p><button class="new" type="submit" value="It is way">It is way</button></p>
+            <p><button class="new" type="submit" value="It is way">The first way</button></p>
         </form>
 
         <form action="/ban">
-            <p><button class="new" type="submit" value="It is way">It is way</button></p>
+            <p><button class="new" type="submit" value="It is way">The second way</button></p>
         </form>
 
         <form action="/love">
-            <p><button class="new" type="submit" value="It is way">It is way</button></p>
+            <p><button class="new" type="submit" value="It is way">The third way</button></p>
         </form>
         </center>
 
-        <div class="vertmenu">
-            <h3>Тренировка</h3>
+        <center><footer class="vertmenu">
+            <h3>Полезные ссылки:</h3>
             <ul>
                 <li><a href="http://vk.com">Vk</a></li>
                 <li><a href="http://mail.google.com">Gmail</a></li>
                 <li><a href="http://www.youtube.com">YouTube</a></li>
             </ul>
-        </div>
-
+        </footer>
+        </center>        
     </body>
 
 </html> 
